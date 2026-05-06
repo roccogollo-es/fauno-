@@ -58,14 +58,16 @@ body {
   }
   .glass-nav {
     position: fixed;
-    bottom: 20px;
+    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
     left: 16px;
     right: 16px;
     border-radius: 20px;
     z-index: 1000;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    height: calc(68px + env(safe-area-inset-bottom, 0px));
   }
   .tab-content {
-    padding-bottom: 120px;
+    padding-bottom: calc(120px + env(safe-area-inset-bottom, 0px));
   }
 }
 
