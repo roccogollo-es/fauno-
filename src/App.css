@@ -38,6 +38,32 @@ body {
   position:relative; z-index:10; overflow:hidden;
   box-shadow:0 30px 60px -10px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.08);
   color:white;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 500px) {
+  body {
+    align-items: flex-start;
+  }
+  .app-container {
+    padding: 0;
+  }
+  .glass-phone {
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    border-radius: 0;
+    border: none;
+  }
+  .glass-nav {
+    bottom: 24px;
+    left: 16px;
+    right: 16px;
+    border-radius: 20px;
+  }
+  .tab-content {
+    padding-bottom: 100px;
+  }
 }
 
 .tab-content {
