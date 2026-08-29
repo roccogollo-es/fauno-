@@ -1,0 +1,308 @@
+[
+  {
+    "id": 1,
+    "name": "Abejaruco Europeo",
+    "scientific": "Merops apiaster",
+    "diet": "Abejas, avispas y libélulas.",
+    "habitat": "Taludes arenosos, riberas y zonas abiertas.",
+    "description": "Ave inconfundible por sus colores turquesa, amarillo, naranja y verde. Es cazador experto de insectos en vuelo.",
+    "activeSeason": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "migratory": true,
+    "migrationRoute": "Europa a África subsahariana",
+    "products": [
+      {
+        "name": "Semillas Fauno Premium",
+        "icon": "🥜",
+        "price": "12.99€"
+      },
+      {
+        "name": "Comedero Terracota",
+        "icon": "🏺",
+        "price": "18.99€"
+      }
+    ],
+    "curiosities": [
+      "Captura insectos en vuelo",
+      "Anida en túneles excavados en taludes",
+      "El macho ofrece insectos durante el cortejo"
+    ],
+    "keywords": [
+      "abejaruco",
+      "bee-eater",
+      "merops",
+      "apiaster"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Petirrojo Europeo",
+    "scientific": "Erithacus rubecula",
+    "diet": "Lombrices, insectos, bayas y semillas.",
+    "habitat": "Bosques, jardines y parques urbanos.",
+    "description": "Su pecho naranja rojizo lo hace fácil de reconocer. Es un ave confiada y habitual en jardines.",
+    "activeSeason": [
+      0,
+      1,
+      2,
+      9,
+      10,
+      11
+    ],
+    "migratory": false,
+    "migrationRoute": "Residente en gran parte de Europa",
+    "products": [
+      {
+        "name": "Comedero Clásico Fauno",
+        "icon": "🏡",
+        "price": "22.99€"
+      },
+      {
+        "name": "Mezcla Frutos del Bosque",
+        "icon": "🫐",
+        "price": "9.99€"
+      }
+    ],
+    "curiosities": [
+      "Puede cantar de noche cerca de luz artificial",
+      "Es muy territorial",
+      "Suele acercarse a zonas removidas del jardín"
+    ],
+    "keywords": [
+      "petirrojo",
+      "robin",
+      "erithacus",
+      "rubecula"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Cigüeña Blanca",
+    "scientific": "Ciconia ciconia",
+    "diet": "Ranas, insectos, ratones y lombrices.",
+    "habitat": "Praderas, humedales y zonas agrícolas.",
+    "description": "Símbolo de primavera en Europa. Anida en tejados, campanarios y plataformas elevadas.",
+    "activeSeason": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "migratory": true,
+    "migrationRoute": "Europa a África subsahariana por Gibraltar",
+    "products": [
+      {
+        "name": "Plataforma Nido Cigüeña",
+        "icon": "🏗️",
+        "price": "89.99€"
+      },
+      {
+        "name": "Gusanos Secos Premium",
+        "icon": "🪱",
+        "price": "14.99€"
+      }
+    ],
+    "curiosities": [
+      "Puede migrar miles de kilómetros",
+      "Aprovecha corrientes térmicas",
+      "Suele volver al mismo nido"
+    ],
+    "keywords": [
+      "cigueña",
+      "cigüeña",
+      "stork",
+      "ciconia"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Golondrina Común",
+    "scientific": "Hirundo rustica",
+    "diet": "Insectos capturados en vuelo.",
+    "habitat": "Zonas rurales, granjas y espacios abiertos.",
+    "description": "Ave veraniega de vuelo ágil y cola ahorquillada. Construye nidos de barro en aleros.",
+    "activeSeason": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "migratory": true,
+    "migrationRoute": "Europa a África del sur",
+    "products": [
+      {
+        "name": "Nido Artificial Golondrina",
+        "icon": "🏠",
+        "price": "19.99€"
+      },
+      {
+        "name": "Barro para Nidos Fauno",
+        "icon": "🧱",
+        "price": "7.99€"
+      }
+    ],
+    "curiosities": [
+      "Come y bebe en vuelo",
+      "Puede criar varias veces por temporada",
+      "Se orienta muy bien en migración"
+    ],
+    "keywords": [
+      "golondrina",
+      "swallow",
+      "hirundo",
+      "rustica"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Flamenco Rosa",
+    "scientific": "Phoenicopterus roseus",
+    "diet": "Algas, crustáceos y larvas de insectos.",
+    "habitat": "Lagunas salinas, estuarios y marismas.",
+    "description": "Ave acuática de colonias numerosas. Su tono rosado depende de los carotenoides de su alimento.",
+    "activeSeason": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "migratory": false,
+    "migrationRoute": "Colonias en sur de Europa y norte de África",
+    "products": [
+      {
+        "name": "Guía Aves Acuáticas Fauno",
+        "icon": "📚",
+        "price": "24.99€"
+      },
+      {
+        "name": "Prismáticos Fauno Pro",
+        "icon": "🔭",
+        "price": "129.99€"
+      }
+    ],
+    "curiosities": [
+      "Duerme sobre una pata",
+      "Filtra alimento con el pico",
+      "Puede vivir varias décadas"
+    ],
+    "keywords": [
+      "flamenco",
+      "flamingo",
+      "phoenicopterus",
+      "roseus"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Águila Real",
+    "scientific": "Aquila chrysaetos",
+    "diet": "Conejos, liebres, roedores y aves medianas.",
+    "habitat": "Montañas, acantilados y bosques abiertos.",
+    "description": "Rapaz majestuosa de gran envergadura, propia de cadenas montañosas y zonas abiertas.",
+    "activeSeason": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "migratory": false,
+    "migrationRoute": "Residente en montañas europeas",
+    "products": [
+      {
+        "name": "Prismáticos Fauno Elite",
+        "icon": "🔭",
+        "price": "199.99€"
+      },
+      {
+        "name": "Guía Rapaces Europeas",
+        "icon": "📘",
+        "price": "29.99€"
+      }
+    ],
+    "curiosities": [
+      "Detecta presas a gran distancia",
+      "Sus nidos pueden ser enormes",
+      "Alcanza gran velocidad en picado"
+    ],
+    "keywords": [
+      "aguila",
+      "águila",
+      "eagle",
+      "aquila",
+      "chrysaetos"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Martinete común",
+    "scientific": "Nycticorax nycticorax",
+    "diet": "Peces pequeños, anfibios, insectos acuáticos y crustáceos.",
+    "habitat": "Humedales, riberas, lagunas, arrozales y zonas con vegetación cerca del agua.",
+    "description": "Garza compacta de hábitos crepusculares y nocturnos. Tiene dorso oscuro, cuerpo claro, ojo rojo y una pluma blanca característica en época reproductora.",
+    "activeSeason": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "migratory": true,
+    "migrationRoute": "Europa y Mediterráneo hacia África, con poblaciones residentes en zonas favorables",
+    "products": [
+      {
+        "name": "Guía Aves de Humedal Fauno",
+        "icon": "📚",
+        "price": "24.99€"
+      },
+      {
+        "name": "Prismáticos Fauno Pro",
+        "icon": "🔭",
+        "price": "129.99€"
+      }
+    ],
+    "curiosities": [
+      "Suele alimentarse al atardecer o de noche",
+      "Su ojo rojo ayuda mucho en la identificación",
+      "Cría en colonias junto a otras garzas"
+    ],
+    "keywords": [
+      "martinete",
+      "garza nocturna",
+      "night heron",
+      "black-crowned night heron",
+      "heron",
+      "egretta",
+      "nycticorax",
+      "bittern"
+    ]
+  }
+]

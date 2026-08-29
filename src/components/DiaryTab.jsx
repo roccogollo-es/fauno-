@@ -1,6 +1,7 @@
 import { ACHIEVEMENTS } from '../data/birds'
+import { localizeBird } from '../i18n'
 
-export default function DiaryTab({ diary, onSelectBird }) {
+export default function DiaryTab({ diary, onSelectBird, copy, language }) {
   const total = diary.length
   const unique = new Set(diary.map(e => e.birdId)).size
   const migratory = diary.filter(e => e.bird?.migratory).length
@@ -18,22 +19,22 @@ export default function DiaryTab({ diary, onSelectBird }) {
   return (
     <div className="diary-tab fade-in">
       <header className="glass-header">
-        <div className="logo">📖 Mi Diario</div>
+        <div className="logo">📖 {copy.diary.title}</div>
         <div className="diary-count">{total} obs.</div>
       </header>
 
       <div className="diary-stats">
         <div className="glass-stat">
           <strong>{total}</strong>
-          <span>Observaciones</span>
+          <span>{copy.feed.myObs}</span>
         </div>
         <div className="glass-stat">
           <strong>{unique}</strong>
-          <span>Especies</span>
+          <span>{copy.feed.species}</span>
         </div>
         <div className="glass-stat">
           <strong>{migratory}</strong>
-          <span>Migratorias</span>
+          <span>{copy.feed.migratory}</span>
         </div>
       </div>
 
@@ -61,27 +62,34 @@ export default function DiaryTab({ diary, onSelectBird }) {
       {diary.length === 0 ? (
         <div className="empty-diary">
           <div className="empty-icon">🔭</div>
-          <h4>Tu diario está vacío</h4>
-          <p>Usa la cámara IA para identificar aves o añádelas desde su ficha</p>
+          <h4>{copy.diary.emptyTitle}</h4>
+          <p>{copy.diary.emptyText}</p>
         </div>
       ) : (
         <div className="diary-entries">
-          {diary.map(entry => (
-            <div key={entry.id} className="diary-entry" onClick={() => onSelectBird(entry.bird)}>
-              {entry.photo ? (
-                <img src={entry.photo} alt={entry.bird?.name} className="entry-photo" />
-              ) : (
-                <img src={entry.bird?.img} alt={entry.bird?.name} className="entry-photo" />
-              )}
-              <div className="entry-info">
-                <h4>{entry.bird?.name}</h4>
-                <p className="entry-sci"><i>{entry.bird?.scientific}</i></p>
-                <p className="entry-date">📅 {new Date(entry.date).toLocaleDateString('es-ES', { day:'numeric', month:'short', year:'numeric' })}</p>
-                {entry.bird?.migratory && <span className="badge-migr">✈ Migratoria</span>}
-              </div>
-              <div className="card-arrow">›</div>
-            </div>
-          ))}
+          {diary.map(entry => {
+            const bird = entry.bird ? localizeBird(entry.bird, language) : null
+            return (
+              <button key={entry.id} className="diary-entry" onClick={() => onSelectBird(bird)} type="button">
+                {entry.photo ? (
+                  <img src={entry.photo} alt={bird?.name} className="entry-photo" />
+                ) : typeof bird?.img === 'string' && bird.img.length <= 4 ? (
+                  <div className="entry-photo" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem', background: 'rgba(255,255,255,0.08)' }}>
+                    {bird.img}
+                  </div>
+                ) : (
+                  <img src={bird?.img} alt={bird?.name} className="entry-photo" />
+                )}
+                <div className="entry-info">
+                  <h4>{bird?.name}</h4>
+                  <p className="entry-sci"><i>{bird?.scientific}</i></p>
+                  <p className="entry-date">📅 {new Date(entry.date).toLocaleDateString(language, { day:'numeric', month:'short', year:'numeric' })}</p>
+                  {bird?.migratory && <span className="badge-migr">✈ {copy.feed.migratory}</span>}
+                </div>
+                <div className="card-arrow">›</div>
+              </button>
+            )
+          })}
         </div>
       )}
     </div>

@@ -1,0 +1,68 @@
+[
+  {
+    "speciesId": 1,
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "userName": "CarlosM",
+    "observedAt": "2026-04-28T10:00:00.000Z",
+    "locationLabel": "Madrid, ES",
+    "source": "seed",
+    "status": "verified",
+    "confidence": 98
+  },
+  {
+    "speciesId": 2,
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "userName": "JohnB",
+    "observedAt": "2026-01-15T10:00:00.000Z",
+    "locationLabel": "Londres, UK",
+    "source": "seed",
+    "status": "verified",
+    "confidence": 92
+  },
+  {
+    "speciesId": 3,
+    "lat": 40.4168,
+    "lng": -3.7038,
+    "userName": "RosaL",
+    "observedAt": "2026-03-20T10:00:00.000Z",
+    "locationLabel": "Madrid, ES",
+    "source": "seed",
+    "status": "verified",
+    "confidence": 95
+  },
+  {
+    "speciesId": 4,
+    "lat": 48.2082,
+    "lng": 16.3738,
+    "userName": "AnnaS",
+    "observedAt": "2026-04-15T10:00:00.000Z",
+    "locationLabel": "Viena, AT",
+    "source": "seed",
+    "status": "verified",
+    "confidence": 89
+  },
+  {
+    "speciesId": 5,
+    "lat": 37.3891,
+    "lng": -5.9845,
+    "userName": "IsabelF",
+    "observedAt": "2026-02-10T10:00:00.000Z",
+    "locationLabel": "Doñana, ES",
+    "source": "seed",
+    "status": "verified",
+    "confidence": 99
+  },
+  {
+    "speciesId": 6,
+    "lat": 42.3505,
+    "lng": -0.6563,
+    "userName": "PabloA",
+    "observedAt": "2026-01-08T10:00:00.000Z",
+    "locationLabel": "Pirineos, ES",
+    "source": "seed",
+    "status": "verified",
+    "confidence": 87
+  }
+]

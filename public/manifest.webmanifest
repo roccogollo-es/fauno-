@@ -1,0 +1,10 @@
+{
+  "name": "FAUNO",
+  "short_name": "FAUNO",
+  "description": "Identificación de aves, cantos, mapa y comederos recomendados.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fbfbfd",
+  "theme_color": "#e8e1ff",
+  "lang": "es"
+}

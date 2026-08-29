@@ -1,0 +1,50 @@
+http:
+  routers:
+    fauno-web-http:
+      entryPoints:
+        - http
+      rule: Host(`fauno.eu`) || Host(`www.fauno.eu`)
+      service: fauno-web-service
+      middlewares:
+        - redirect-to-https
+
+    fauno-web-https:
+      entryPoints:
+        - https
+      rule: Host(`fauno.eu`) || Host(`www.fauno.eu`)
+      service: fauno-web-service
+      tls:
+        certResolver: letsencrypt
+
+    fauno-app-http:
+      entryPoints:
+        - http
+      rule: Host(`app.fauno.eu`)
+      service: fauno-app-service
+      middlewares:
+        - redirect-to-https
+
+    fauno-app-https:
+      entryPoints:
+        - https
+      rule: Host(`app.fauno.eu`)
+      service: fauno-app-service
+      tls:
+        certResolver: letsencrypt
+
+  services:
+    fauno-web-service:
+      loadBalancer:
+        servers:
+          - url: http://host.docker.internal:8092
+
+    fauno-app-service:
+      loadBalancer:
+        servers:
+          - url: http://host.docker.internal:8090
+
+  middlewares:
+    redirect-to-https:
+      redirectScheme:
+        scheme: https
+        permanent: true
