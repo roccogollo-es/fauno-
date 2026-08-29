@@ -110,6 +110,55 @@ const hydrateBirdFromApi = (data, language) => {
   }
 }
 
+const compressImage = async (file, maxDimension = 1600, quality = 0.85) => {
+  if (!file || !file.type || !file.type.startsWith('image/')) return file
+  return new Promise((resolve) => {
+    const img = new Image()
+    const url = URL.createObjectURL(file)
+    img.onload = () => {
+      URL.revokeObjectURL(url)
+      let { width, height } = img
+      if (width <= maxDimension && height <= maxDimension && file.size < 1024 * 1024) {
+        return resolve(file)
+      }
+      if (width > height) {
+        if (width > maxDimension) {
+          height = Math.round((height * maxDimension) / width)
+          width = maxDimension
+        }
+      } else {
+        if (height > maxDimension) {
+          width = Math.round((width * maxDimension) / height)
+          height = maxDimension
+        }
+      }
+      const canvas = document.createElement('canvas')
+      canvas.width = width
+      canvas.height = height
+      const ctx = canvas.getContext('2d')
+      if (!ctx) return resolve(file)
+      ctx.drawImage(img, 0, 0, width, height)
+      canvas.toBlob(
+        (blob) => {
+          if (!blob) return resolve(file)
+          const compressed = new File([blob], file.name.replace(/\.[^/.]+$/, '.jpg'), {
+            type: 'image/jpeg',
+            lastModified: Date.now(),
+          })
+          resolve(compressed)
+        },
+        'image/jpeg',
+        quality
+      )
+    }
+    img.onerror = () => {
+      URL.revokeObjectURL(url)
+      resolve(file)
+    }
+    img.src = url
+  })
+}
+
 export default function CameraTab({ onIdentified, addToDiary, copy, language, currentUser }) {
   const [phase, setPhase] = useState('idle')
   const [preview, setPreview] = useState(null)
@@ -132,9 +181,10 @@ export default function CameraTab({ onIdentified, addToDiary, copy, language, cu
     }, 200)
 
     try {
+      const optimizedFile = await compressImage(file)
       const location = await getLocation()
       const formData = new FormData()
-      formData.append('image', file)
+      formData.append('image', optimizedFile)
       formData.append('language', language)
       formData.append('userEmail', currentUser?.email || '')
       formData.append('userName', currentUser?.name || 'Usuario FAUNO')

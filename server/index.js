@@ -12,7 +12,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const PORT = Number(process.env.PORT || 3001)
 const DATA_DIR = process.env.FAUNO_DATA_DIR || path.join(__dirname, 'data')
 const UPLOAD_DIR = process.env.FAUNO_UPLOAD_DIR || path.join(__dirname, 'uploads')
-const MAX_UPLOAD_MB = Number(process.env.FAUNO_MAX_UPLOAD_MB || 8)
+const MAX_UPLOAD_MB = Number(process.env.FAUNO_MAX_UPLOAD_MB || 25)
 const VISION_MODEL_ENABLED = process.env.FAUNO_VISION_MODEL_ENABLED !== 'false'
 const VISION_MODEL_ID = process.env.FAUNO_VISION_MODEL_ID || 'Xenova/mobilevit-xx-small'
 const MODEL_CACHE_DIR = process.env.FAUNO_MODEL_CACHE_DIR || path.join(__dirname, 'models')
@@ -193,7 +193,7 @@ async function identifyBird(file, image, speciesList) {
     try {
       const base64Image = fs.readFileSync(image.fullPath).toString('base64')
       
-      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent', {
+      const response = await fetch('https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
