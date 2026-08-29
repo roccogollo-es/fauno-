@@ -49,6 +49,8 @@ const dictionary = {
       birdsIn: 'Aves en',
       active: 'Activa',
       migratory: 'Migratoria',
+      emptyTitle: 'Aún no hay aves identificadas',
+      emptyText: 'Toca el botón central de la cámara para fotografiar y registrar tu primera ave.',
     },
     camera: {
       title: 'Identificar IA',
@@ -134,6 +136,8 @@ const dictionary = {
       birdsIn: 'Birds in',
       active: 'Active',
       migratory: 'Migratory',
+      emptyTitle: 'No birds identified yet',
+      emptyText: 'Tap the center camera button to photograph and identify your first bird.',
     },
     camera: {
       title: 'AI identification',
@@ -219,6 +223,8 @@ const dictionary = {
       birdsIn: 'Oiseaux en',
       active: 'Active',
       migratory: 'Migratrice',
+      emptyTitle: 'Aucun oiseau identifié pour l’instant',
+      emptyText: 'Touchez le bouton de la caméra pour photographier et reconnaître votre premier oiseau.',
     },
     camera: {
       title: 'Identification IA',
@@ -304,6 +310,8 @@ const dictionary = {
       birdsIn: 'Vögel im',
       active: 'Aktiv',
       migratory: 'Zugvogel',
+      emptyTitle: 'Noch keine Vögel identifiziert',
+      emptyText: 'Tippe auf das Kamerasymbol, um deinen ersten Vogel zu fotografieren.',
     },
     camera: {
       title: 'KI-Erkennung',
@@ -389,6 +397,8 @@ const dictionary = {
       birdsIn: 'Aves em',
       active: 'Ativa',
       migratory: 'Migratória',
+      emptyTitle: 'Nenhuma ave identificada ainda',
+      emptyText: 'Toque no botão central da câmera para fotografar e reconhecer sua primeira ave.',
     },
     camera: {
       title: 'Identificação IA',
@@ -474,6 +484,8 @@ const dictionary = {
       birdsIn: 'Uccelli in',
       active: 'Attiva',
       migratory: 'Migratoria',
+      emptyTitle: 'Nessun uccello ancora identificato',
+      emptyText: 'Tocca il pulsante della fotocamera per fotografare e riconoscere il tuo primo uccello.',
     },
     camera: {
       title: 'Identificazione IA',
