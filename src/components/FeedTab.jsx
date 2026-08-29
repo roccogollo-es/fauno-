@@ -8,7 +8,8 @@ const currentMonth = new Date().getMonth()
 export default function FeedTab({ onSelectBird, diary, copy, language }) {
   const [search, setSearch] = useState('')
   const [serverBirds, setServerBirds] = useState([])
-  const currentMonthName = new Intl.DateTimeFormat(language, { month: 'short' }).format(new Date())
+  const rawMonthName = new Intl.DateTimeFormat(language, { month: 'long' }).format(new Date())
+  const currentMonthName = rawMonthName.charAt(0).toUpperCase() + rawMonthName.slice(1)
 
   useEffect(() => {
     let ignore = false
